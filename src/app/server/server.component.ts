@@ -8,18 +8,21 @@ import { Component } from '@angular/core';
 export class ServerComponent {
 
   hovering = "you are not hovering over the button";
-  text = "";
+  text = "hehehe";
+  d = true;
+
+  constructor(){
+    setTimeout(()=>{
+      this.d = false;
+    }, 2000);
+  }
+
   setMouseStatusHover(){
-    return this.hovering = "you are hovering over the button.";
+    return this.hovering = "you are hovering over the button. the text is " + this.text;
   }
 
   setMouseStatusNoHover(){
     return this.hovering = "you are no longer hovering over the button.";
-  }
-
-  onUpdateName(event){
-    this.text = event.target.value;
-    console.log(event);
   }
 
 }
