@@ -7,10 +7,19 @@ import { Component } from '@angular/core';
 })
 export class ServerComponent {
 
-  disabled = true;
-
-  mouseOver(){
-    this.disabled = false;
-    console.log(this.disabled);
+  hovering = "you are not hovering over the button";
+  text = "";
+  setMouseStatusHover(){
+    return this.hovering = "you are hovering over the button.";
   }
+
+  setMouseStatusNoHover(){
+    return this.hovering = "you are no longer hovering over the button.";
+  }
+
+  onUpdateName(event){
+    this.text = event.target.value;
+    console.log(event);
+  }
+
 }

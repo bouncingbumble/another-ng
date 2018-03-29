@@ -1,2 +1,5 @@
-<button class="btn btn" [disabled]="mouseOvered" (mouseout)="mouseOvered=false" (mouseover)="mouseOvered=true">Add Server</button>
-<h1>I am the server component</h1>
+<label for="[object Object]"></label>
+<input type="text" name="" value="" (input)="onUpdateName($event)">
+<button class="btn btn-primary btn-lg" (mouseout)="setMouseStatusNoHover()" (mouseover)="setMouseStatusHover()">Hover Over Me</button>
+<h1>{{ hovering }}</h1>
+<h3>{{ text }}</h3>
