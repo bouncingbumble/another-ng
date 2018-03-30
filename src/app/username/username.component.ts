@@ -13,4 +13,8 @@ export class UsernameComponent implements OnInit {
   ngOnInit() {
   }
 
+  onButtonClick(){
+    this.username = null;
+  }
+
 }
