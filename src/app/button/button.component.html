@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="col-xs-12">
+    <div class="row">
+      <button (click)="onClick()" type="button" class="btn btn-default btn-lg">Display Details</button>
+    </div>
+    <div class="row">
+      <p *ngIf="show"> secret password = "tuna"</p>
+      <table>
+        <tr *ngFor="let click of buttonClicks; let i = index" [ngStyle]="{backgroundColor: i>3 ? 'blue' : 'white'}" [ngClass]="{white: i>3}">
+          {{click}}
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

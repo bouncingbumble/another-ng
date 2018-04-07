@@ -1,4 +1,7 @@
 <label for="[object Object]"></label>
 <input type="text" name="" value="" [(ngModel)]="text">
-<button class="btn btn-primary btn-lg" [disabled]="d" (mouseout)="setMouseStatusNoHover()" (mouseover)="setMouseStatusHover()">Hover Over Me</button>
-<h1>{{ hovering }}</h1>
+<button class="btn btn-primary btn-lg"  (mouseout)="setMouseStatusNoHover()" (mouseover)="setMouseStatusHover()">Hover Over Me</button>
+<h1 *ngIf="buttonHovered; else noHover"> {{ hovering }}</h1>
+<ng-template #noHover>
+   <h1 [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: text=='yay'}"> You have not touched the button</h1>
+</ng-template>
